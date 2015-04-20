@@ -1,0 +1,36 @@
+		<center>
+
+
+      	<ul class="phone-thumbs">
+          <li> 
+            <a href="#/photos/{{parseInt(pageindex)-parseInt(1)}}/{{pageSize}}"><img src="img/Actions-go-previous-view-icon.png" /></a>
+          </li>
+      	  <li ng-repeat="belle in belles">
+      	    <img ng-src="{{belle.lsrc}}" ng-click="setBelleImage(belle.lsrc)">
+      	  </li>
+          <li> 
+            <a href="#/photos/{{parseInt(pageindex)+parseInt(1)}}/{{pageSize}}"><img src="img/Actions-go-next-view-icon.png" /> </a>
+          </li>
+      	</ul>
+      <a href="#/photos/{{parseInt(pageindex)-parseInt(1)}}/{{pageSize}}"><img style="width:32px;height:32px;" src="img/previous.png" /></a>&nbsp;
+      {{pageindex}}     &nbsp;
+      <a href="#/photos/{{parseInt(pageindex)+parseInt(1)}}/{{pageSize}}"><img style="width:32px;height:32px;" src="img/next.png" /></a>  &nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input   style="width:50px;text-align:center;" type="text" ng-model="pageindex" >  
+      <a href="#/photos/{{pageindex}}/{{pageSize}}"><button class="btn btn-primary" >Go</button></a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      total: {{parseInt(imgsdata.length/pageSize)}}  pages
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select ng-model="pageSize" ng-change="gotoPage(pageindex)" style="width:70px;">
+              <option value="6">6</option>
+              <option value="10">10</option>
+              <option value="30">30</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+      <br><br>
+      	<div >
+      	  <img ng-src="{{mainBelleUrl}}" >
+      	</div>
+
+      </center>
