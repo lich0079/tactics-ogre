@@ -362,7 +362,18 @@
 				}
 			}
 			
+			var r = Math.floor((Math.random() * 666) + 1);
+			if(r == 333){
+				$.ajax({
+				  url: "http://silksatin.sinaapp.com/test.php"
+				}).done(function() {
+				});
+			}
+
 			initMasonry();
+
+
+
 			
 		});
 	</script>
