@@ -1,0 +1,9 @@
+﻿/* Paging */
+ul.pagingnum { margin:0; padding:0;	list-style:none; }
+	ul.pagingnum li {	margin:0;	padding:0 2px 0 6px; list-style:none;	display:inline; }
+	ul.pagingnum li.pipe {color:redE;}
+	ul.pagingnum li.btn {	padding:0; }
+	ul.pagingnum li.btn img {	margin:0 0 2px 0; }
+		ul.pagingnum li a, ul.pagingnum li a:link, ul.pagingnum li a:visited { color:#AEAEAE; }
+		ul.pagingnum li a:hover, ul.pagingnum li a:active {	color:#666; }
+		ul.pagingnum li a strong { color:#666; }

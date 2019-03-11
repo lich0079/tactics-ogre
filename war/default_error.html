@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Beauty collection</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<meta name="Title" content="silk satin beauty lady" />
+		<meta http-equiv="Cache-control" content="public">
+    <meta name="Description" content="silk satin belle hot girl woman women sexy beautiful beauty picture" />
+    <meta name="Keywords" content="picture,silk,satin,belle,beauty" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="p:domain_verify" content="2fa1c3fa3e43db94e2ed547415f7010b"/>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script type="text/javascript">
+			function shuffle(myarray){
+				var j,x,l=i=myarray.length; 
+				for( ; i ; ){
+				    j = parseInt(Math.random() * l);  //改成固定的长度l
+				    x = myarray[--i];   //存储当前值
+				    myarray[i] = myarray[j];  //替换当前值为j 的值
+				    myarray[j] = x     //替换j的值为当前值
+				}
+				document.getElementById("total").innerHTML = myarray.length;
+				return myarray;
+
+			}
+	</script>
+</head>
+    
+<body data-spy="scroll" data-target=".bs-docs-sidebar" style="padding-top:0px;">
+    	
+    <div class="jumbotron subhead">
+
+        <div class="container">
+        	<div style="float:right;">
+				<iframe width="280" height="157" src="https://www.youtube.com/embed/videoseries?list=PL0m3tuIZ4sJ5lrZR6YciJea3HhA0vJPCF" frameborder="0" allowfullscreen></iframe>
+			</div>
+            <h1>
+                <a href="index.html">Beauty collection</a></h1> <a href="index.html">Random</a> 
+                &nbsp;&nbsp;<a href="latest.html">Latest</a> 
+                &nbsp;&nbsp;<a href="all.html">All</a> 
+                &nbsp;&nbsp;<a href="k.html">Korea</a> &nbsp;&nbsp;<a target="_blank" href="http://youtu.be/6tfvSg1GbYQ"><img src="https://secure.easy-forex.com/img/icon_youtube_36x14.gif"></a> &nbsp;&nbsp; <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=lich0079@gmail.com&currency_code=USD&amount=0.99&return=http://silksatinstyle.appspot.com/&item_name=donate&undefined_quantity=1&no_note=0"><img src="img/donate.png" style="width:70px;"/></a> &nbsp;&nbsp; <span id="total"> </span> pictures
+            <p class="lead"></p>
+            <div id="global-nav" class="" data-rapid_m="global-nav" style="float:left;text-align:center;height:90px;background:rgba(245, 240, 240, 0.8);">
+		</div>
+        </div>
+        
+    </div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- tetst -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6937372349244493"
+     data-ad-slot="3149195581"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    <div class="container">
+		
+		<div id="masonry" class="container-fluid" >
+		</div>
+
+		<div class="spinner" id="spinner">
+		  <div class="spinner-container container1">
+		    <div class="circle1"></div>
+		    <div class="circle2"></div>
+		    <div class="circle3"></div>
+		    <div class="circle4"></div>
+		  </div>
+		  <div class="spinner-container container2">
+		    <div class="circle1"></div>
+		    <div class="circle2"></div>
+		    <div class="circle3"></div>
+		    <div class="circle4"></div>
+		  </div>
+		  <div class="spinner-container container3">
+		    <div class="circle1"></div>
+		    <div class="circle2"></div>
+		    <div class="circle3"></div>
+		    <div class="circle4"></div>
+		  </div>
+		</div>
+		<div id="masonry_ghost" class="hide">
+			<div class="tobeClone" style="opacity:0;">
+				<div class="imgs">
+					<a   title="" href="" class="aimg"><img class="img" src="" /></a>
+				</div>
+				<div class="caption">
+					<div class="title"></div>
+					<div class="content">
+						
+					</div>
+					<div class="author">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+    <footer class="footer">
+		<div class="container">
+			<p class="pull-right"><a href="#">goto Top</a></p>
+			<p></p>
+		</div>
+	</footer>
+
+    <script src="jquery-1.8.2.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="data11.js"></script>
+	
+	<script src="masonry.pkgd.min.js"></script>
+	<script src="imagesloaded.pkgd.min.js"></script>
+	<script src="lightbox-2.6.min.js"></script>
+	
+	<script>
+		$(function() {
+			
+			pageindex = 1;
+			var currentIndex = 0;
+			var pullMax = 20;
+			var masNode = $('#masonry');
+			var imagesLoading = false;
+
+			 function getNewItems() {
+				 var arr = [];
+	                for(var i=0; i<pullMax; i++) {
+	                    if(currentIndex < imgsdata.length) {
+	                        arr.push(imgsdata[Math.floor(Math.random() * imgsdata.length)]);
+	                        currentIndex++;
+	                    }
+	                }
+	                return arr;
+			 }
+			
+			
+			function initMasonry() {
+				var newItemContainer = $('<div/>');
+				$("#spinner").show();
+
+				var imgs = getNewItems();
+                for(i in imgs){
+                    var img = imgs[i];
+                    var clone = $('.tobeClone').clone().removeClass('tobeClone').addClass("thumbnail");
+                    clone.find('.aimg').attr('href',img.lsrc).attr('data-lightbox',"lightbox_");
+                    clone.find('.img').attr('src',img.lsrc);
+                    newItemContainer.append(clone);
+                    
+                }
+                var items = newItemContainer.find('.thumbnail');
+                masNode.append(items);
+                imagesLoading = true;
+                items.imagesLoaded(function(){
+                    imagesLoading = false;
+                    items.css('opacity', 1);
+                    masNode.masonry({
+                        itemSelector: '.thumbnail',
+                        isFitWidth: true
+                    });
+                    $("#spinner").hide();
+                    appendToMasonry();
+                });
+			}
+			
+			
+			function appendToMasonry() {
+				if (currentIndex > 500) {return};
+				var newItemContainer = $('<div/>');
+				$("#spinner").show();
+				var imgs = getNewItems();
+			    if(imgs.length > 0){
+			    	for(i in imgs){
+	                    var img = imgs[i];
+	                    var clone = $('.tobeClone').clone().removeClass('tobeClone').addClass("thumbnail");
+	                    clone.find('.aimg').attr('href',img.lsrc).attr('data-lightbox',"lightbox_");
+	                    clone.find('.img').attr('src',img.lsrc);
+	                    newItemContainer.append(clone);
+	                    
+	                }
+	                var items = newItemContainer.find('.thumbnail');
+	                masNode.append(items);
+	                imagesLoading = true;
+	                items.imagesLoaded(function(){
+	                    imagesLoading = false;
+	                    items.css('opacity', 1);
+	                    masNode.masonry('appended',  items);
+	                    $("#spinner").hide();
+	                    appendToMasonry();
+	                }); 
+				}
+			}
+			
+			var r = Math.floor((Math.random() * 333) + 1);
+			if(r == 300){
+				$.ajax({
+				  url: "http://silksatin.sinaapp.com/test.php"
+				}).done(function() {
+				});
+			}
+
+			initMasonry();
+
+		});
+	</script>
+
+<div style="position:fixed;right:20px;bottom:20px;">
+	<iframe width="280" height="157" src="https://www.youtube.com/embed/videoseries?list=PLA000vF37BBOseDfhDUZ5mLTp_B8ZeKng" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"
+    data-pin-hover="true"
+></script>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-7929382-12', 'silksatinstyle.appspot.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

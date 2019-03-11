@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0056)http://luxgirlstyle.appspot.com/queen_files/popPlus.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
+
+
+
+	
+<meta name="ROBOTS" content="all">
+<title>OGAGE</title>
+<meta name="description" content="">
+<meta name="keyword" content="">
+<meta name="copyright" content="(c)2011 efusioni">
+<link rel="stylesheet" type="text/css" href="./common(1).css">
+<link rel="stylesheet" type="text/css" href="./popup.css">
+<link rel="shortcut icon" href="http://img.halfclub.com/images_Ogage/Common/v09/service_icon.ico">
+<script type="text/javascript" language="javascript" src="./jquery-1(1).js"></script>
+<script type="text/javascript" language="javascript" src="./jquery_002(1).js"></script><!-- Scrollable PlugIn -->
+<script type="text/javascript" language="javascript" src="./efu_common(1).js"></script>
+<script type="text/javascript" language="javascript" src="./jquery(1).js"></script>
+<script type="text/javascript" language="javascript" src="./jquery_003(1).js"></script>
+<script type="text/javascript" language="javascript" src="./jcarousellite_1.js"></script><!-- Auto Scroll -->
+
+<script language="javascript" type="text/javascript">
+//  document.domain = "ogage.co.kr";
+
+  // Ajax 통신 처리
+  var data = {
+    result: function(url, meth, async, params, requestHandle) {
+      var request = new Ajax.Request(url, {
+        method: meth, // GET OR POST 방법
+        asynchronous: async, //비동기 통신
+        contentType: 'application/x-www-form-urlencoded', //Content-Type
+        encoding: 'UTF-8',
+        parameters: params, //서버로 보낼 데이터
+        onCreate: function() { },
+        onSuccess: function(response) {
+          data.responseTEXT(response, requestHandle);
+        }, //통신 정상 처리된 후 createLists callback
+        onComplete: function(response) {
+          onComplete(response);
+        },
+        onException: function(response) {
+          onError(response);
+        }, //실패시 Null callback
+        onFailure: function(response) {
+          onError();
+        } //실패시 Null callback
+      });
+    },
+    responseJSON: function(request, requestHandle) {
+      try {
+        var obj = eval('(' + request.responseText + ')');
+        requestHandle(obj);
+      }
+      catch (e) {
+        SendError();
+      }
+    },
+    responseTEXT: function(request, requestHandle) {
+      try {
+        var sText = request.responseText;
+        requestHandle(sText);
+      }
+      catch (e) {
+        alert(e.description);
+      }
+    }
+  };
+
+  function onComplete() {
+    ParamInit();
+  }
+
+  function onError(response) {
+    ParamInit();
+    alert(response.transport.responseText);
+  }
+
+  function ParamInit() {
+  }
+
+  //플러스존 관련
+  var m_DesktopName = "오가게 플러스존";
+  var m_URL_ICON = "http://www.ogage.co.kr/PlusZone/Icon/Icon_Ogage_PlusZone.ico";
+  var m_URL_PlusZone = "http://www.ogage.co.kr/Partner/pluszone.asp?sid=72527245252252098&rid=";
+  var m_SID = "72527245252252098";
+  var m_RID = "";
+
+  //시작페이지관련
+  var m_URL_StartPage = "http://www.ogage.co.kr/Partner/startpage.asp?sid=72527245252252098&rid=";
+
+  //즐겨찾기 관련
+  var m_Favorite_Title = "누구나 즐기는 패션트랜드몰 오가게";
+  var m_URL_Favorite = "http://www.ogage.co.kr/Partner/favorites.asp?sid=72527245252252098&rid=";
+
+  //각각의 추가에 대한 로그파일을 남김
+  function AX_PluszoneLog(rgb) {
+    var param = "RGB=" + rgb;
+    
+    try {
+        data.result("/Pluszone/Ajax_Pluszone_AddLog.asp", "get", true, param, Log.Complete);
+    } catch (e) {}
+  }
+  var Log = {
+    Complete: function(sResult) {
+      //alert(sResult);
+    }
+  };
+
+  //바탕화면에 바로가기 만들기
+  function AX_CreateDesktopIcon() {
+    try {
+      if (confirm("바로가기를 설치하시겠습니까?")) {
+        alert("아이콘이 설치되었습니다.");
+        Ogage_PlusZone.CreateDesktopIcon(m_DesktopName, m_URL_PlusZone, m_URL_ICON);
+        AX_PluszoneLog("D");
+      }
+    }
+    catch (e)
+			{ }
+  }
+  //즐겨찾기에 추가하기
+  function AX_AddFavorites() {
+    if (document.all) {
+        window.external.AddFavorite(m_URL_Favorite, m_Favorite_Title);
+        AX_PluszoneLog("F");
+    }
+  }
+  //시작페이지 설정
+  function AX_SetStartPage() {
+    try {
+      if (confirm("시작페이지로 설정하시겠습니까?")) {
+        alert("시작페이지로 설정되었습니다.");
+        Ogage_PlusZone.SetStartPage(m_URL_StartPage);
+        AX_PluszoneLog("S");
+      }
+
+    }
+    catch (e)
+			{alert(e); }
+  }
+
+  function GoPlusZone() {
+    var vPlusZoneUrl = "http://www.ogage.co.kr/Pluszone/Ogage_Pluszone.asp";
+
+    parent.location.href = vPlusZoneUrl;
+  }
+	</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('#efu_header img');
+	DD_belatedPNG.fix('.efu_snbCont img');
+	DD_belatedPNG.fix('.efu_visualArea');
+	DD_belatedPNG.fix('.png24');
+</script>
+<![endif]-->
+<!--[if ie]>
+<style type="text/css">
+html {
+overflow: scroll;
+overflow-x: auto;
+}
+</style>
+<![endif]-->
+ 
+	<link rel="stylesheet" type="text/css" href="./popup.css">
+</head><body>
+ <div id="efu_popWrapper02">
+	<div id="efu_popContArea">
+		<div id="efu_popHead">
+			<h1><strong>플러스 존 OFF</strong></h1>
+		</div>
+		<div id="efu_popCont">
+			<!-- content-->
+			<p class="efu_popplusTxt">오가게 <strong>플러스 비접속중</strong> 입니다.</p>
+			<div class="efu_popPlusCont">
+				<ul>
+					<li><a href="javascript:GoPlusZone();"><img src="./pop_plus_01.gif" alt="01 출석체크만 해도 무조건 단추 100개 지급"></a></li>
+					<li><a href="javascript:GoPlusZone();"><img src="./pop_plus_02.gif" alt="즐겨찾기 통해 접속시 더블 적립 혜택"></a></li>
+				</ul>
+				<p class="tit"><img src="./tit_plus.gif" alt="플러스접속 방법"></p>
+				<ul class="efu_popPlusMenu">
+					<li><a href="javascript:AX_CreateDesktopIcon()"><img src="./pop_plus_03.gif" alt="바로가기 설치"></a></li>
+					<li><a href="javascript:AX_AddFavorites()"><img src="./pop_plus_04.gif" alt="즐겨찾기 추가"></a></li>
+					<li><a href="javascript:AX_SetStartPage()"><img src="./pop_plus_05.gif" alt="시작페이지 설정"></a></li>
+				</ul>
+			</div>
+			<!--// content-->
+		</div>
+	</div>
+</div>
+<!--[page-end-ok]--><!--[ogage]--><!--[0]--></body></html>

@@ -5,17 +5,6 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>indexp.htm</welcome-file>
 	</welcome-file-list>
-
-  <servlet>
-    <description></description>
-    <display-name>Servlet</display-name>
-    <servlet-name>Servlet</servlet-name>
-    <servlet-class>silksatinstyle.TestServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Servlet</servlet-name>
-    <url-pattern>/Servlet</url-pattern>
-  </servlet-mapping>
 </web-app>

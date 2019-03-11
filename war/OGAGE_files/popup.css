@@ -1,0 +1,369 @@
+/*////////////////////////////////////////////////////////////////////////
+/*   Copyright (c) eFusioni                                             */
+/*   All rights reserved.                                               */
+/*                                                                      */
+/*   Css For                                                            */
+/*   Write By Efusioni WebPublisher Lee So Yeon                         */
+/*//////////////////////////////////////////////////////////////////////*/
+@CHARSET "EUC-KR";
+/************ Popup ************/
+#efu_popWrapper	{margin:0;padding:0;border:2px solid #e3e3e3;border-top:none;border-left:none;}
+#efu_popWrapper .efu_btnArea	{padding:10px 0 0 0;}
+#efu_popContArea	{position:relative;padding:23px 25px 30px 25px;border:2px solid #835ec8;}
+#efu_popContArea02	{padding:20px;border:2px solid #835ec8;}
+#efu_popHead	{height:34px;border-bottom:1px solid #d4d4d4;}
+#efu_popHead02	{height:61px;border-bottom:1px solid #d4d4d4;}
+#efu_popHead03	{height:35px;}
+#efu_popHead h1, #efu_popHead02 h1, #efu_popHead03 h1	{text-align:left;}
+#efu_popWrapper .txt	{width:112px;height:17px;padding:0px 5px 0 0;border:1px solid #d2d2d2;vertical-align:middle;text-align:left;line-height:16px; background:#fff;}
+#efu_popWrapper h2	{height:24px;padding-top:20px;}
+.efu_popClose	{position:absolute;right:0px;_right:0px;top:0;}
+.efu_popClose img	{cursor:pointer}
+/* 우편번호검색 */
+.efu_popzipCon	{width:431px;margin:0;min-height:280px;_height:280px;padding-top:20px;}
+.efu_popzipTxt	{padding-left:7px;font-size:12px;font-weight:bold;color:#7c54ba;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/payment/popup/bg_dot.gif') no-repeat left 3px;}
+.efu_popzipCon .efu_popzipTxt02	{padding:2px 0 8px 0;font-size:11px;color:#777;}
+.efu_popzipCon .efu_popSearch	{height:28px;margin-top:15px;}
+.efu_popzipCon .efu_popSearch .txt	{ width:228px;height:17px;padding:0px 5px 0 0;border:1px solid #d2d2d2;vertical-align:middle;text-align:left;line-height:16px; background:#fff;}
+.efu_popzipCon .efu_board	{width:431px;height:150px;border-bottom:1px solid #d9d9d9;overflow:auto;overflow-x:hidden;}
+.efu_popzipCon .efu_board .efu_zipAddress	{list-style:none;margin:0;padding:4px 0;}
+.efu_popzipCon .efu_board .efu_zipAddress li	{margin:5px 0 3px;color:#999;}
+.efu_popzipCon .efu_board .efu_zipAddress li .efu_zipNum	{display:inline-block;width:100px;text-align:center;}
+.efu_popzipCon .efu_board .efu_zipAddress li .efu_address	{display:inline;width:316px;padding-left:15px;color:#999;}
+.efu_popzipCon .efu_board .efu_zipAddress li .efu_no	{display:block;padding:30px 0;text-align:center;}
+
+/* 주소록 */
+.efu_orderAddrCon	{width:708px;margin:0;min-height:294px;_height:294px;}
+.efu_orderAddrCon .efu_form .last th, .efu_orderAddrCon .efu_form .last td	{background:none;border:none;}
+.efu_orderAddrCon .efu_form th	{padding:7px 0 5px 0;border:none;vertical-align:top;}
+.efu_orderAddrCon .efu_form th span	{padding-left:8px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/payment/bg_dot.gif') no-repeat left 50%;}
+.efu_orderAddrCon .efu_form td	{padding:7px 0 5px 0;vertical-align:top;font-size:11px;}
+.efu_orderAddrCon .efu_form td.input	{padding:5px 0 6px 0;vertical-align:top;font-size:11px;color:#d2d2d2;}
+.efu_orderAddrCon .efu_form td span	{display:block;height:21px;margin:0;color:#d2d2d2;}
+.efu_orderAddrCon .efu_form .txt	{width:105px;}
+.efu_orderAddrCon .efu_btnArea	{padding:10px 0 0 0;}
+
+/* 선택상품변경 */
+.efu_popCartArea	{width:431px;margin:0;min-height:268px;_height:258px;}
+.efu_popCartArea h2	{height:30px;padding-top:20px;font-weight:bold;font-size:16px;color:#666;}
+.efu_popOption	{height:28px;padding:0 6px;background:#f2f2f2;border:1px solid #e5e5e5;}
+.efu_popOption img	{margin-top:8px;}
+.efu_popOption .efu_select	{width:365px;margin:4px 0 0 4px;}
+.efu_popOptionCon	{height:67px;margin:9px 0;border:1px solid #e8e8e8;overflow:auto;overflow-x:hidden;}
+.efu_popOptionCon ul	{padding:3px 10px;}
+.efu_popOptionCon ul li	{clear:both;width:395px;height:22px;}
+.efu_popOptionCon ul li .efu_optionName	{display:inline-block;width:170px;padding-top:5px;font-size:11px;color:#969696;vertical-align:top;overflow:hidden;}
+.efu_popOptionCon ul li select	{width:45px !important;height:20px !important;}
+.efu_popOptionCon ul li .efu_optionPrice	{display:inline-block;padding-top:5px;color:#666;vertical-align:top;}
+.efu_popline	{border-bottom:2px solid #f5f5f5;}
+.efu_popCartArea .efu_total .efu_price 	{ display:inline-block;margin-right:10px;padding-top:10px;font:bold 14px/16px "Dotum","Arial","tahoma";color:#000;}
+
+/* 예치제*/
+.efu_popescrow	{width:431px;margin:0;height:332px;padding-top:20px;}
+.efu_popescrow p	{padding-bottom:20px;}
+.efu_popescrow .efu_btnArea	{height:27px;margin:0;padding:10px 0 0 0 !important;text-align:right;}
+
+/* 취소신청완료 */
+.efu_popRefundOk	{width:431px;margin:0;height:220px;padding-top:20px;}
+.efu_popRefundOk p.pb20	{padding-bottom:20px;}
+.efu_popRefundOk p.pb10	{padding-bottom:10px;}
+.efu_popRefundOk p.efu_poplast	{padding:9px 0 0 0;border-top:1px solid #d9d9d9;}
+
+/* 영수증/세금계산서 안내 */
+.efu_taxsave	{width:708px;height:663px;margin:0;overflow:hidden}
+.efu_taxsave ul	{margin:8px 0 15px;}
+.efu_taxsave ul li	{margin-bottom:7px;vertical-align:top;}
+.efu_taxsave .efu_taxsaveTb	{border-top:1px solid #adadad;border-left:1px solid #dadada;border-right:1px solid #dadada;table-layout:fixed;}
+.efu_taxsave .efu_taxsaveTb th	{height:30px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/payment/popup/bg_taxsaveTb.gif') repeat-x left top;border-bottom:1px solid #dadada;text-align:center;}
+.efu_taxsave .efu_taxsaveTb th span	{display:block;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/payment/popup/division.gif') no-repeat right top;}
+.efu_taxsave .efu_taxsaveTb td	{padding:15px 0 15px 15px;border-right:1px solid #dadada;border-bottom:1px solid #dadada;vertical-align:top;text-align:left;}
+.efu_taxsave .efu_taxsaveTb td.tit	{padding:15px 0 15px 25px;border-right:1px solid #dadada;border-bottom:1px solid #dadada;font-weight:bold;font-size:12px;vertical-align:middle;text-align:left;}
+.efu_taxsave .efu_taxsaveTb td ul	{margin:0;padding:0;}
+.efu_taxsave .efu_taxsaveTb td ul li	{margin:0;padding-left:6px;font:normal 11px/16px "Dotum", "돋움", "Arial", "tahoma";color:#999 !important;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/bul/g_dot2.gif') no-repeat left 5px;}
+
+/* 쇼핑문의 */
+.efu_ShoppingQCon	{width:566px;height:404px;margin:0;padding-top:20px;}
+.efu_ShoppingQCon p	{padding-bottom:15px;font-size:11px;line-height:16px;color:#7e7e7e;}
+.efu_ShoppingQCon .efu_form th	{border-right:0;padding:8px 0 7px;}
+.efu_ShoppingQCon .efu_form th span	{padding-left:8px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/payment/bg_dot.gif') no-repeat left 50%;}
+.efu_ShoppingQCon .efu_form td	{padding:6px 0 6px;}
+.efu_ShoppingQCon .efu_form td span	{font-size:11px;margin:0;color:#888;}
+.efu_ShoppingQCon .efu_form td select	{width:210px;}
+.efu_ShoppingQCon .efu_form td .txt	{width:416px;}
+.efu_ShoppingQCon .efu_form td textarea	{width:416px;height:59px;padding:5px;border:1px solid #d2d2d2;vertical-align:middle;line-height:18px; overflow-y:auto;}
+.efu_ShoppingQCon .efu_form td.input span	{display:block;margin-top:3px;}
+.efu_ShoppingQCon .efu_btnArea	{height:29px;padding:10px 0 0 0;}
+
+.efu_ShoppingQListCon	{width:566px;height:377px;margin:0;padding-top:20px;}
+.efu_ShoppingQListCon p	{padding-bottom:15px;font-size:11px;line-height:16px;color:#7e7e7e;}
+.efu_qnaList	{width:100%;border-top:2px solid #919191;table-layout:fixed;}
+.efu_qnaList .last td	{border-bottom:1px solid #d9d9d9;}
+.efu_qnaList th	{padding-left:40px;height:25px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/payment/division02.gif') no-repeat right 50%;line-height:14px;text-align:left;vertical-align:middle;}
+.efu_qnaList th.no	{padding-left:40px;height:25px;background:none;line-height:14px;text-align:left;vertical-align:middle;}
+.efu_qnaList td	{padding:10px 0 8px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/common/dlineH.gif') repeat-x left top;vertical-align:top;}
+.efu_qnaList td ul	{ margin:0;padding-left:40px;}
+.efu_qnaList td ul li	{margin:0;padding:0;line-height:24px;}
+
+/* 적립금사용,쿠폰사용 */
+.efu_popMoneyArea	{width:708px;height:687px;margin:0;padding-top:20px;}
+.efu_popMoneyArea .efu_pop_text	{padding-left:7px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/payment/popup/bg_dot02.gif') no-repeat left 6px;color:#777;}
+.efu_popMoneyArea .efu_pop_text img	{vertical-align:middle;margin-left:5px;}
+	.efu_popPointArea	{margin-top:10px;height:52px;background:#f6e9fc;border:1px solid #eddff2;}
+	.efu_popPointArea p	{padding-top:18px;font-size:12px;text-align:center;}
+	.efu_popPointArea p.efu_no	{padding-top:20px;font-size:12px;text-align:center;}
+	.efu_popPointArea strong	{font-size:16px;}
+	.efu_popPdtInfo	{clear:both;min-height:74px;_height:74px;background:#f2f2f2;}
+	.efu_popPdtInfo p	{padding:19px 20px;color:#7c7c7c;line-height:16px;}
+	.efu_popPdtInfo02	{padding:10px 0 0;height:33px;font-size:12px;}
+	.efu_popPdtInfo02 .fl	{font-size:14px;font-weight:bold;line-height:16px;color:#6d6d6d;}
+	.efu_popPdtInfo02 .fl strong	{color:#000;}
+.efu_popMoneyArea .efu_cartInfo	{clear:both;width:100%;padding-top:28px;border-top:2px solid #f5f5f5;overflow:hidden;}
+.efu_popMoneyArea .efu_cartInfo .efu_infoList	{float:left;margin-left:10px;}
+	.efu_popCoupon	{padding:10px 0 5px;height:26px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/common/dlineH.gif') repeat-x left bottom;}
+	.efu_popCoupon .fl	{font-size:12px;padding-top:3px;}
+	.efu_popCoupon .fl label	{margin-right:10px;}
+	.efu_popCoupon span	{padding:0 3px 0 7px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/payment/popup/bg_dot02.gif') no-repeat left 45%;font-weight:bold;letter-spacing:-1px;}
+	.efu_popCoupon .fr	{font-size:12px;}
+	.efu_popCoupon .fr select	{width:265px;}
+.efu_popCouponArea	{width:708px;height:645px;margin:0;padding-top:20px;}
+.efu_popCouponArea h2	{height:24px;padding-top:20px;}
+.efu_popCouponArea .efu_cartInfo	{clear:both;width:100%;padding-top:28px;border-top:2px solid #f5f5f5;overflow:hidden;}
+.efu_popCouponArea .efu_cartInfo .efu_infoList	{float:left;margin-left:10px;}
+.efu_popCouponArea .efu_popPdtInfo02 .fr	{font-size:14px;font-weight:bold;line-height:16px;color:#6d6d6d;}
+.efu_popCouponArea .efu_popPdtInfo02 .fr strong	{color:#000;}
+
+/* 상품정보-미리보기 */
+.efu_preview	{width:708px;height:610px;overflow:hidden;}
+.efu_preview .efu_detailContB {padding:0;}
+.efu_preview .efu_detailListTab #efu_detailListTab01{width:100%; background:#fff;}
+.efu_preview .efu_bigImgSize	{height:551px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/product/bg_preview_bigsize.gif') repeat-x left top;overflow:hidden;}
+.efu_preview .efu_bigImgSize img	{display:block;border:1px solid #e3e3e3;text-align:center}
+.efu_preview .efu_proValuList {height:300px; overflow-y:scroll;}
+.efu_preview .efu_proValuList td.tit	{cursor:pointer}
+
+.efu_popdetailListTab .efu_popcontTap {padding-left:1px;overflow:hidden; background:url("http://img.halfclub.com/Images_Ogage/Web/common/V11/images/common/purpleDot.gif") repeat-x 0 bottom;}
+.efu_popdetailListTab .efu_popcontTap li {display:inline; float:left; width:175px !important; height:20px !important; padding:11px 0 0 0 !important; margin:0 0 0 -1px !important; font-weight:bold !important; font-size:12px !important; text-align:center; overflow:hidden; color:#777 !important; background:url("http://img.halfclub.com/Images_Ogage/Web/common/V11/images/product/detailListTab_off.gif") no-repeat 0 0 !important; z-index:10000 !important; cursor:pointer !important;}
+.efu_popdetailListTab .efu_popcontTap li.efu_tapOver {color:#7c54ba !important; background:url("http://img.halfclub.com/Images_Ogage/Web/common/V11/images/product/detailListTab_on.gif") no-repeat 0 0 !important;}
+
+/* 위시리스트 담기 */
+.efu_popwishArea	{width:431px;height:193px;}
+.efu_popwishArea h2	{padding:0 !important;font:bold 16px/18px "Dotum", "돋움", "Arial", "tahoma";height:53px !important;}
+.efu_popwishArea h2 span	{display:block;font-size:11px;}
+.efu_popwishArea .efu_popWishCon .efu_popWishConL	{float:left;width:140px;}
+.efu_popwishArea .efu_popWishCon .efu_popWishConL img	{width:138px;height:138px;border:1px solid #e3e3e3;}
+.efu_popwishArea .efu_popWishCon .efu_popWishConR	{float:right;width:281px;margin-left:10px;}
+.efu_popwishArea .efu_popOptionCon	{height:47px;margin:9px 0;border:1px solid #e8e8e8;overflow:auto;overflow-x:hidden;}
+.efu_popwishArea .efu_popOptionCon ul	{padding:3px 10px;}
+.efu_popwishArea .efu_popOptionCon ul li	{width:242px;clear:both;height:22px;}
+.efu_popwishArea .efu_popOptionCon ul li .efu_optionName	{display:inline-block;width:110px;padding-top:5px;font-size:11px;color:#969696;vertical-align:top;overflow:hidden;}
+.efu_popwishArea .efu_popOptionCon ul li select	{width:45px !important;height:20px !important;}
+.efu_popwishArea .efu_popOptionCon ul li .efu_optionPrice	{display:inline-block;padding-top:5px;color:#666;vertical-align:top;}
+.efu_popwishArea .efu_popOption .efu_select	{width:215px;margin:4px 0 0 4px;}
+
+/* 위시리스트그룹 */
+.efu_wishListArea	{width:201px;margin:0;min-height:207px;_height:207px;}
+.efu_wishListArea .efu_popzipTxt	{clear:both;padding-top:0;}
+.efu_wishListArea .efu_wishGroup	{width:199px;height:95px;margin-top:5px;border:1px solid #d2d2d2;overflow:auto;overflow-x:hidden;}
+.efu_wishListArea .efu_wishGroup ul	{margin:0;padding:10px;}
+.efu_wishListArea .efu_wishGroup ul li	{line-height:16px;}
+.efu_wishListArea .efu_btnArea	{height:18px;padding:6px 0 8px !important;margin-bottom:15px;border-bottom:1px solid #d2d2d2;}
+.efu_wishListArea .efu_wishGroup02	{margin-top:7px;}
+.efu_wishListArea .efu_wishGroup02 .txt	{width:112px;height:17px;padding:0px 5px 0 0;border:1px solid #d2d2d2;vertical-align:middle;text-align:left;line-height:16px; background:#fff;}
+
+/* 위시리스트삭제 */
+.efu_popwishDel	{width:346px;height:156px;}
+.efu_popwishDel .efu_brandText	{min-height:73px !important;padding:50px 0 0 0 !important;border:1px solid #d9d9d9;border-top:0;text-align:center;}
+.efu_popwishDel .efu_popBrandCon02 .efu_brandText	{min-height:83px;padding:70px 0 0 0;border:1px solid #d9d9d9;border-top:0;text-align:center;}
+
+.efu_popwishDel .efu_brandText strong	{display:block;font-size:14px;color:#835ec8;}
+.efu_popwishDel .efu_cenBtnArea	{text-align:center;padding-top:9px;}
+
+/* 상품상세 - 위시리스트담기 */
+.efu_wishDefault	{width:267px;height:189px;overflow:hidden}
+.efu_wishDefault .efu_wishDefaultCon	{min-height:119px;_height:119px;padding-top:30px;border-bottom:1px solid #d4d4d4;}
+.efu_wishDefault .efu_cenBtnArea	{padding-top:10px;text-align:center;}
+	.efu_wishAddBox	{padding-top:10px;text-align:center;}
+	.efu_wishAddBox img	{cursor:pointer}
+	.efu_wishAddBox select	{width:150px;}
+	.efu_wishAddCon	{margin-top:10px;padding:9px 10px;background:#f2f2f2;border:1px solid #e7e7e7;}
+	.efu_wishAddCon .txt	{width:137px !important;}
+	.efu_wishAddCon img	{_margin-top:1px;vertical-align:middle}
+/* 장바구니 담기 */
+.efu_cartArea	{width:566px;height:281px;overflow:hidden}
+.efu_cartArea h2	{padding:0 !important;font:bold 16px/18px "Dotum", "돋움", "Arial", "tahoma";height:53px !important;}
+.efu_cartArea h2 span	{display:block;font-size:11px;}
+.efu_popcartCon .efu_popWishConL	{float:left;width:190px;}
+.efu_popcartCon .efu_popWishConL img	{width:188px;height:188px;border:1px solid #e3e3e3;}
+.efu_popcartCon .efu_popWishConR	{float:right;width:361px;margin-left:10px;}
+	.efu_popWishConR .efu_DproInfoAreaR .efu_DproInfoList td.efu_DI_optionCont {padding:0;}
+	.efu_popWishConR .efu_DproInfoAreaR .efu_DproInfoList td.efu_DI_optionCont p.infoText {padding-bottom:5px;color:#aaaaaa;}
+	.efu_popWishConR .efu_DproInfoAreaR .efu_DproInfoList td.efu_DI_optionCont .selectTypeA {margin-top:4px;width:289px;}
+	.efu_popWishConR .efu_DproInfoAreaR .efu_DproInfoList td.efu_DI_optionCont .selectTypeCont {width:289px;}
+	.efu_popWishConR .efu_DproInfoAreaR .efu_DproInfoList td.efu_DI_optionCont .selectTypeA ul li:hover{width:250px;}
+
+/* 사이즈조건표 */
+.efu_sizeArea	{width:566px;height:294px;padding-top:20px;overflow:hidden;}
+.efu_sizeArea .efu_popInfo	{padding-bottom:15px;line-height:18px;}
+	.efu_sizeTab .efu_contTap {padding-left:1px;overflow:hidden; background:url("http://img.halfclub.com/Images_Ogage/Web/common/V11/images/common/purpleDot.gif") repeat-x 0 bottom;}
+	.efu_sizeTab .efu_contTap li {display:inline; float:left;width:75px; height:20px; padding-top:11px; margin-left:-1px; font-weight:bold; font-size:12px; text-align:center; overflow:hidden; color:#777; background:url("http://img.halfclub.com/Images_Ogage/Web/common/V11/images/product/popup/sizeTab_off.gif") no-repeat 0 0; z-index:10000;}
+	.efu_sizeTab .efu_contTap li.efu_tapOver {color:#7c54ba; background:url("http://img.halfclub.com/Images_Ogage/Web/common/V11/images/product/popup/sizeTab_on.gif") no-repeat 0 0;}
+	.efu_sizeTab .efu_contTapCont {margin-top:20px;}
+	.efu_popInfo .fr	{font-size:11px;color:#999;}
+	.efu_popInfo .fr strong	{font-weight:normal;color:#666;}
+.efu_sizeArea .ar	{color:#999;}
+.efu_sizeTb	{border-top:2px solid #919191;}
+.efu_sizeTb th	{padding:7px 0 5px;background:#f5f5f5 url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/common/dlineH02.gif') repeat-x left bottom;border-right:1px solid #d9d9d9;font-size:12px;color:#666;text-align:center;}
+.efu_sizeTb th.last	{padding:7px 0 5px;background:#f5f5f5;border-right:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;font-size:12px;color:#666;text-align:center;}
+.efu_sizeTb td	{text-align:left;border-right:1px solid #d9d9d9;font-size:11px;color:#8d8d8d;}
+.efu_sizeTb td.last	{text-align:left;border-right:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;font-size:11px;color:#8d8d8d;}
+.efu_sizeTb td .sizeL	{display:inline-block;width:31px;padding-left:25px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/payment/division02.gif') no-repeat right 2px;}
+.efu_sizeTb td .sizeR	{display:inline-block;padding-left:15px;}
+
+/* 관심브랜드 등록 */
+.efu_popBrand	{width:346px;height:209px;overflow:hidden;}
+	.efu_popBrandCon	{border-top:2px solid #808183;border-bottom:3px solid #f5f5f5;border-bottom-width:2px;}
+	.efu_popBrandCon .efu_brandText	{min-height:113px;padding:50px 0 0 0;border:1px solid #d9d9d9;border-top:0;text-align:center;}
+	.efu_popBrandCon .efu_brandText strong	{display:block;font-size:17px;color:#835ec8;}
+	.efu_popBrandCon .efu_brandText span	{display:block;padding-top:15px;font-weight:bold;font-size:13px;line-height:18px;}
+	.efu_popBrandCon .efu_brandText .t_purple	{display:inline-block;font-size:14px;padding:0;}
+	.efu_popBrandCon02	{border-top:2px solid #808183;border-bottom:3px solid #f5f5f5;border-bottom-width:2px;}
+.efu_popBrand .efu_cenBtnArea	{text-align:center;padding-top:9px;}
+
+/* 플로그로 공유 */
+.efu_flogArea	{width:708px;height:350px;padding-top:20px;overflow:hidden;}
+.efu_flogArea p	{vertical-align:top;}
+	.efu_flogCon	{min-height:280px;_height:280px;padding-bottom:20px;border-bottom:2px solid #808183;overflow:hidden;}
+	.efu_flogCon .efu_flogConL	{float:left;width:280px;}
+	.efu_flogCon .efu_flogConL img	{width:278px;height:278px;border:1px solid #d9d9d9;}
+	.efu_flogCon .efu_flogConR	{float:right;width:408px;}
+	.efu_flogCon .efu_flogConR h2	{height:28px !important;padding:2px 0 0 0 !important;font-size:16px;color:#232323;overflow:hidden;}
+	.efu_popFlog	{margin:0 0 10px 0;padding:10px 8px 10px 10px;background:#f2f2f2;border:1px solid #e6e6e6;overflow:hidden;}
+	.efu_popFlog ul li	{height:18px;font-size:0;vertical-align:top;overflow:hidden;}
+	.efu_popFlog ul li.last	{height:15px;}
+	.efu_popFlog ul li .t_flog	{display:inline-block;width:70px;vertical-align:middle}
+	.efu_popFlog ul li .t_site	{text-decoration:none;font-size:11px;}
+	.efu_popFlog ul li .fr	{padding-top:2px;font-size:11px;color:#9c9c9c;text-decoration:none}
+	.efu_popFlog ul li span	{display:inline-block;margin-right:4px;color:#828282;font-size:11px;text-decoration:line-through;}
+	.efu_popFlog ul li strong	{color:#7c54ba;font-size:11px;}
+	.efu_popFlog textarea	{clear:both;width:374px;height:86px;_height:83px;padding:5px;border:1px solid #d2d2d2;vertical-align:middle;line-height:16px; overflow-y:auto;resize:none}
+	.efu_popFlog .t_tag	{display:inline-block;width:31px;vertical-align:middle;}
+	.efu_popFlog .txt	{width:271px !important;margin:0;}
+	.efu_no	{margin-bottom:0;}
+.efu_flogArea .efu_btnArea	{clear:both;}
+.efu_flogArea .efu_btnArea ul	{margin:0;padding:0;}
+.efu_flogArea .efu_btnArea ul li	{padding-left:6px;font:11px/14px "Dotum", "돋움", "Arial", "tahoma";color:#999 !important;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/bul/g_dot2.gif') no-repeat left 50%;}
+
+/* 반품상세보기 */
+.efu_refundDetail	{width:708px;height:670px;overflow:hidden;}
+.efu_refundDetail .mt10	{margin-top:10px;}
+.efu_refundDetail .mt20	{margin-top:20px;}
+	.efu_refundCon	{padding:20px 18px 15px;background:#f2f2f2;}
+	.efu_refundCon ul li {padding-left:6px;font:11px/20px "Dotum", "돋움", "Arial", "tahoma";color:#7c7c7c !important;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/bul/g_dot2.gif') no-repeat left 7px;}
+	.efu_refundCon ul li span { padding-left:45px}
+/* 반품신청 완료*/
+.efu_popRefundOk02	{width:431px;height:487px;padding-top:20px;overflow:hidden;}
+.efu_popRefundOk02 dl	{margin-bottom:20px;}
+.efu_popRefundOk02 dl dt	{padding-left:9px;font-weight:bold;color:#888;line-height:20px;}
+.efu_popRefundOk02 dl dd	{padding-left:20px;color:#888;line-height:18px;font-family:"Dotum", "돋움", "Arial", "tahoma"}
+.efu_popRefundOk02 ul	{margin:20px 0 0;}
+.efu_popRefundOk02 ul li	{margin-bottom:20px;padding-left:9px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/bul/g_dot2.gif') no-repeat left 7px;}
+.efu_popRefundOk02 .efu_poplast	{padding:9px 0 0 0;border-top:1px solid #d9d9d9;}
+/* 배송사연락처 */
+.efu_BpPlaceList	{width:566px;height:536px;padding-top:20px;overflow:hidden;}
+.efu_BpPlaceList .efu_list	{margin-top:10px;}
+.efu_BpPlaceList .efu_list th	{padding:6px 0 5px;}
+.efu_BpPlaceList .efu_list td	{padding:6px 0 5px;color:#999;}
+.efu_BpPlaceList .efu_list td.tit strong	{padding-left:20px;color:#777;}
+.efu_BpPlaceList .efu_list td.no	{padding-left:50px;text-align:left;}
+/* 부분취소 */
+.efu_RefundInfo	{width:431;height:574px;overflow:hidden;}
+.efu_RefundInfo h3	{height:20px;}
+.efu_RefundInfo p.pb20	{padding-bottom:20px;}
+.efu_RefundInfo dl	{margin-bottom:15px;}
+.efu_RefundInfo dl dt	{padding-left:9px;font-weight:bold;color:#888;line-height:18px;}
+.efu_RefundInfo dl dd	{padding-left:20px;color:#888;line-height:18px;font-family:"Dotum", "돋움", "Arial", "tahoma"}
+.efu_RefundInfo ul li	{margin-top:8px;}
+/* 적립금사용안내 */
+.efu_popGuide	{width:708px;padding-top:20px;}
+.efu_popGuide h2	{height:24px;padding-top:38px !important;}
+.efu_popGuide .efu_popGuideCon	{border-bottom:2px solid #f5f5f5;}
+.efu_popGuide .efu_popGuideCon ul	{border:1px solid #dcdcdc;}
+.efu_popGuide .efu_popGuideCon ul li	{padding:20px 0 20px 17px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/common/dlineH02.gif') repeat-x left bottom;}
+.efu_popGuide .efu_popGuideCon ul li.last	{background:none}
+
+/* 로그인 */
+.efu_popLoginArea	{position:relative;width:709px;height:445px;padding-top:20px;overflow:hidden;}
+.efu_popLoginArea .efu_popLoginCon	{min-height:242px;_height:242px;overflow:hidden}
+	.efu_popLoginCon .efu_popLoginConL	{float:left;width:366px;}
+		.efu_popLoginConL .efu_loginBox	{width:326px;height:85px;margin-top:30px;padding:20px 20px 0 20px;background:#f7f7f7;border-top:1px solid #ddd;border-bottom:1px solid #ddd;}
+		.efu_popLoginConL .efu_loginBox .fl	{width:230px;}
+		.efu_popLoginConL .efu_loginBox label	{display:block;height:25px;}
+		.efu_popLoginConL .efu_loginBox label img {margin-top:4px;}
+		.efu_popLoginConL .efu_loginBox label span	{display:inline-block;width:45px;margin-top:2px;vertical-align:top;}
+		.efu_popLoginConL .efu_loginBox .fl label .txt	{width:174px;}
+		.efu_popLoginConL .efu_loginBox .check	{clear:both;margin:-16px 0 0 35px;padding:0;font-size:11px;color:#818385;}
+		.efu_popLoginConL .efu_loginBox .check .chk	{margin-left:10px;}
+		.efu_popLoginConL .efu_loginTxt	{padding:10px 0 0 0;}
+		.efu_popLoginConL .efu_loginTxt li	{height:23px;}
+		.efu_popLoginConL .efu_loginTxt li .fl	{margin-top:3px;vertical-align:top}
+	.efu_popLoginCon .efu_popLoginConR	{position:absolute;float:right;width:333px;right:0;top:20px;}
+.efu_popLoginArea .efu_popLoginBanner	{clear:both;padding-top:10px}
+
+
+.efu_loginTab .efu_contTap {width:370px;padding-left:1px;overflow:hidden; background:url("http://img.halfclub.com/Images_Ogage/Web/common/V11/images/common/purpleDot.gif") repeat-x 0 bottom;}
+	.efu_loginTab .efu_contTap li {display:inline; float:left;width:186px; height:20px; padding-top:11px; margin-left:-1px; font-weight:bold; font-size:12px; text-align:center; overflow:hidden; color:#777; background:url("http://img.halfclub.com/Images_Ogage/Web/common/V11/images/popup/loginTab_off.gif") no-repeat 0 0; z-index:10000;}
+	.efu_loginTab .efu_contTap li.efu_tapOver {color:#7c54ba; background:url("http://img.halfclub.com/Images_Ogage/Web/common/V11/images/popup/loginTab_on.gif") no-repeat 0 0;}
+
+
+
+
+
+/* 우측 LayerPop */
+#efu_popWrapper02	{position:relative;width:208px;margin:0;padding:0;border:1px solid #383838;background:#fff;overflow:hidden}
+#efu_popWrapper02 #efu_popContArea	{width:208px;padding:0;border:none;background-color:#fff;}
+#efu_popWrapper02 #efu_popCont	{position:relative; margin:8px 10px;}
+#efu_popWrapper02 #efu_popHead	{height:33px;background:#7b7b7b;color:#ffffff;}
+#efu_popWrapper02 #efu_popHead h1	{padding:10px 0 0 10px;text-align:left;font:normal 12px "Dotum", "돋움", "Arial", "tahoma";color:#fff;}
+/* 관심브랜드 */
+.efu_popBrandTabCont	{width:188px;overflow:hidden}
+.efu_popBrandTabCont .fr	{color:#999;}
+.efu_popBrandTab	{}
+.efu_popBrandTab li	{float:left;padding:0 5px 0 0;font:normal 11px "Dotum", "돋움", "Arial", "tahoma";color:#999;}
+.efu_popBrandTab li.efu_tapOver	{font-weight:bold;color:#7d54ba;}
+.efu_popBrandTab li span, .efu_popBrandTab li.efu_tapOver span	{font-weight:normal;color:#959595;}
+.efu_popBrandTabCont .efu_contTapCont	{clear:both;margin-top:7px;}
+.efu_popBrandTabCont .efu_popBrandList	{border-top:1px solid #e8e8e8;height:200px;}
+.efu_popBrandTabCont .efu_popBrandList li	{clear:both;min-height:24px;_height:24px;margin:0;padding:6px 0 8px 5px;border:1px solid #e8e8e8;border-top:0;overflow:hidden}
+.efu_popBrandTabCont .efu_popBrandList li span	{float:right;display:inline;margin:7px 10px 0 0;}
+.efu_popBrandTabCont .efu_popBrandText	{padding:12px 0;background-color:#f2f2f2;text-align:center;line-height:14px;}
+.efu_popBrandTabCont .efu_popBrandText a	{font-weight:bold;color:#555;text-decoration:underline;}
+/* 플러스존 OFF */
+.efu_popplusTxt	{height:18px;padding-left:7px;font-size:11px;color:#959595;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/common/dotBg02.gif') no-repeat left 3px;}
+.efu_popplusTxt strong	{text-decoration:underline;color:#7a55ba;}
+.efu_popPlusCont .tit	{padding:5px 0;}
+.efu_popPlusCont .efu_popPlusMenu	{border:3px solid #cec0e4;}
+/**/
+.efu_popShopCont	{}
+.efu_popShopCont .efu_popShopText	{padding:12px 0;background-color:#f2f2f2;text-align:center;line-height:14px;}
+.efu_popShopCont .efu_popShopText a	{font-weight:bold;color:#555;text-decoration:underline;}
+.efu_popShopCont .efu_popShopSlide	{clear:both;width:188px;}
+.efu_popShopCont .efu_popShopSlide .efu_tit	{height:18px;padding:5px 0 0;}
+.efu_popShopCont .efu_popShopSlide .efu_tit .fl	{color:#7d54ba;font-weight:bold;}
+.efu_popShopCont .efu_popShopSlide .efu_slideArea {position:relative;z-index:1;width:188px;height:50px;}
+.efu_popShopCont .efu_popShopSlide .efu_slideArea .prev	{float:left;padding-top:22px;cursor:pointer}
+.efu_popShopCont .efu_popShopSlide .efu_slideArea .next	{float:right;padding-top:22px;cursor:pointer}
+.efu_popShopCont .efu_popShopSlide .efu_slideCont {position:absolute;left:12px;top:0;width:162px;z-index:1;}
+.efu_popShopCont .efu_popShopSlide .efu_slideCont ul {position:relative; float:left; width:1000px;z-index:1;}
+.efu_popShopCont .efu_popShopSlide .efu_slideCont ul li {display:inline; float:left; margin:0 3px; }
+.efu_popShopCont .efu_popShopSlide .efu_slideCont ul li .proTitle	{color:#666;}
+
+.efu_popShopCont .efu_popShopSlide .efu_pdtInfo	{position:relative;z-index:99;height:50px;text-align:center;}
+.efu_popShopCont .efu_pdtInfo a	{cursor:pointer}
+.efu_popShopCont .efu_pdtInfo .efu_layer	{display:none;position:absolute;left:-10px;top:20px;z-index:999999;margin-right:12px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/popup/bg_pdtInfo.gif') no-repeat 50% top;}
+.efu_popShopCont .efu_pdtInfo .efu_layer .efu_layerTxt	{display:block;width:60px;margin-top:2px;padding:2px 0 0;color:#444;font-weight:normal;font-family:"Dotum", "돋움", "Arial", "tahoma";border:1px solid #7d54ba;background-color:#fff;text-align:left;}
+
+.efu_popShopText02	{min-height:35px;_height:35px;padding:12px 0;background-color:#f2f2f2;text-align:center;line-height:14px;}
+.efu_popShopText02 li	{padding:0 3px 0 8px;background:url('http://img.halfclub.com/Images_Ogage/Web/common/V11/images/popup/bg_dot.gif') no-repeat 4px 50%;font:11px/14px "Dotum", "돋움", "Arial", "tahoma";}
+
+
+/*#efu_popWrapper03*/

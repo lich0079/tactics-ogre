@@ -1,0 +1,300 @@
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<TITLE>皇家骑士团2</TITLE>
+<style type="text/css">
+<!--
+TD {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: "arial";}
+A:active {
+	FONT-SIZE: 9pt; COLOR: #990000; FONT-FAMILY: "arial";}
+A:hover {
+	FONT-SIZE: 9pt; COLOR: #990000; FONT-FAMILY: "arial"; TEXT-DECORATION: underline;}
+A:link {
+	FONT-SIZE: 9pt; COLOR: #cc0000; FONT-FAMILY: "arial"; TEXT-DECORATION: none;}
+A:visited {
+	FONT-SIZE: 9pt; COLOR: #cc0000; FONT-FAMILY: "arial"; TEXT-DECORATION: none;}
+	body{ --SCROLLBAR-FACE-COLOR: #000000; SCROLLBAR-HIGHLIGHT-COLOR: #fffacd; SCROLLBAR-SHADOW-COLOR: #fffacd; SCROLLBAR-3DLIGHT-COLOR: #000000; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #000000; SCROLLBAR-DARKSHADOW-COLOR: #20253a}
+-->
+</style>
+<SCRIPT language=JavaScript>
+//すごく间拔けな书き方をしているにちがいありません。练习ということで、见逃してください。
+function makeArray(n) {
+        this.length = n;
+        for (i = 0; i < n; i++) {
+			this[i] = null;
+		}
+}
+//关数fillBrank。全体を英语读みになめて、空の行があったらそのx=changeElementの项目を埋める。
+function fillBrank(changeElement){
+	for (y=0;y<12;y++){
+		isSelect=0;
+		for (x=0;x<12;x++){
+			if (document.f.elements[x].options[y].selected){
+				isSelect++;
+			}
+		}
+		if (isSelect == 0){
+			document.f.elements[changeElement].options[y].selected=true;
+			break;
+		}
+	}
+}
+//关数ChangeSelection。项目が选择されると呼び出されて、状态を变更する。
+function ChangeSelection(fm, selection, questionNo){
+	var slc = new makeArray(12);	//选择の配列
+	var sts = new makeArray(8);		//德尼姆の能力值の配列
+	var mod = new makeArray(8);		//德尼姆（デニム）の能力值の修正の配列
+	var elm = new makeArray(35);	//各人から见た、属性计算
+	var kanji = new makeArray(5);	//属性の汉字の配列
+	slc[0] = "支配"
+	slc[1] = "平和"
+	slc[2] = "荣光"
+	slc[3] = "名誉"
+	slc[4] = "博爱"
+	slc[5] = "憎恶"
+	slc[6] = "胜利"
+	slc[7] = "牺牲"
+	slc[8] = "繁荣"
+	slc[9] = "理想"
+	slc[10] = "希望"
+	slc[11] = "复仇"
+	sts[0] = 65;
+	sts[1] = 10;
+	sts[2] = 27;
+	sts[3] = 25;
+	sts[4] = 26;
+	sts[5] = 24;
+	sts[6] = 20;
+	sts[7] = 26;
+	mod[0] = mod[4] = 0;
+	mod[1] = mod[3] = 1;
+	mod[2] = 2;
+	mod[5] = mod[7] = -1;
+	mod[6] = -2;
+	for(k=0;k<35;k++){
+		elm[k] = 0;
+	}
+	kanji[0] = "风";
+	kanji[1] = "炎";
+	kanji[2] = "地";
+	kanji[3] = "水";
+	kanji[4] = "无";
+	slcstr = stsstr = elmstr1 = elmstr = "";
+	max = 0;
+	if( selection.selectedIndex == -1){	//よくわからない现象への对处。谜。
+		fillBrank(questionNo);
+		return;
+	}
+//点击した项目から水平にみていって、自分以外にぶつかったらはじきとばす。
+	changeElement=-1;
+	for (i=0;i<12;i++){
+		if ( (selection.selectedIndex == document.f.elements[i].selectedIndex) && (i != questionNo)){
+			changeElement = i;
+		}
+	}
+	fillBrank(changeElement);
+//テキストボックスへ表示する值の准备。
+	for (i=0;i<12;i++){
+		for (j=0;j<12;j++){
+			if (document.f.elements[i].options[j].selected){
+				slcstr += slc[j] + "┃";	//选择を文字列に追加
+				for(k=0;k<8;k++){			//能力值を增减して配列に入れる。
+					sts[k] += ((i % 2) * 2 - 1) * mod[(j + 8 - k) % 8];
+				}
+				for(n=0;n<7;n++){	//各人の属性计算し配列に入れる。
+									//カチュアの风、炎、地、水、无、ヴァイスの风、炎……
+									//elm[4]=elm[9]=elm[14]=...には无の计数が入る。
+					elm[n * 5 + ((i * 12) + j + n) % 5]++;
+				}
+			}
+		}
+	}
+	for(k=0;k<8;k++){					//能力值を文字列に结合
+		if(sts[k] < 0){
+			sts[k] = 0;
+		}
+		stsstr += sts[k] + " ┃";
+	}
+	max = 0;							//属性を文字列に结合
+	for(n=0;n<7;n++){
+		elmstr1 = "";
+		max = 0;
+		for(m=0;m<4;m++){
+			if(max < elm[n * 5 + m]){
+				max = elm[n * 5 + m];
+				elmstr1 = kanji[m];
+			}else if(max == elm[n * 5 + m]){
+				elmstr1 += kanji[m] + "";
+			}
+		}
+		elmstr += elmstr1 + "┃";
+	}
+//
+	document.text_slcstr.elements[0].value = slcstr;	//
+	document.text_stsstr.elements[0].value = stsstr;	//德尼姆（デニム）の能力值の初期值。
+	document.text_elmstr.elements[0].value = elmstr;	//属性用汉字で表示。
+}
+</SCRIPT>
+</HEAD>
+<body bgcolor="#fff5d5">
+<DIV align=center>
+<p><font color="#0000ff"><b>皇家骑士团Ⅱ 主角初期能力计算器</b></font></p>          
+<TABLE width=100%>       
+  <TBODY>       
+  <TR>       
+    <TD> 
+      <p align="center"><font color="#0000ff">提供：千里孤坟&nbsp;&nbsp; 整理：alvin</font>      
+<hr width="80%" size="1" color="#0000FF">     
+      <p>皇家骑士团2         
+      主角德尼姆最初回答的问题不但决定了他个人的初期数值，同时也决定了一些固定同伴的属性（也就是和风使他们初次相遇时在场的所有人）<BR><BR>下表利用Javascript技术，可以快速显示不同选择的能力值及角色属性结果。</p> 
+      <p>资料来源：日站<a href="javascript:if(confirm(%27http://homepage1.nifty.com/~yu/t_ogre/4goddesses_prac.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://homepage1.nifty.com/~yu/t_ogre/4goddesses_prac.html%27" tppabs="http://homepage1.nifty.com/~yu/t_ogre/4goddesses_prac.html">“指轮世界”</a>的TO相关内容</p>       
+      <p>根据该站的解释，ps,sfc,ss版相同的选择结果是不完全同的，sfc，ss版结果一致，但是ps版的结果要先“<b>hp加3，mp减6</b><b>”</b>才是sfc,ss版的结果。这也就是说，同样的情况下,ps版的德尼姆魔法值较多，而sfc,ss版的德尼姆体力稍强。<font color="#FF0000"><b>以下计算的能力值结果都是ps版的情况</b></font></p>      
+      <p>另外，同伴们的属性结果不是单一的，如果有并列两种属性，系统会随机给出一种属性，所以说相同的选择也可能会有同伴们属性的细微差别。当然，不管最终选择如何，风使卡诺普斯的实际属性一定是“风”<BR></p>     
+    </TD>     
+  </TR></TBODY></TABLE><NOBR>     
+<FORM name=f method=post>     
+<TABLE width="100%">     
+  <TBODY>     
+  <TR>     
+    <TH colSpan=3 width="198" bgcolor="#000000"><font color="#FFFFFF"><img border="0" src="zwind.gif" tppabs="http://www.fireemblem.net/obs/pic/zwind.gif" width="16" height="16">风神</font></TH></NOBR>    
+    <TH colSpan=3 width="198" bgcolor="#000000"><NOBR><font color="#FFFFFF"><img border="0" src="zfire.gif" tppabs="http://www.fireemblem.net/obs/pic/zfire.gif" width="16" height="16">炎神</font></NOBR></TH>    
+    <TH colSpan=3 width="198" bgcolor="#000000"><font color="#FFFFFF"><img border="0" src="zearth.gif" tppabs="http://www.fireemblem.net/obs/pic/zearth.gif" width="16" height="16">大地<NOBR>神</NOBR></font></TH>    
+    <TH colSpan=3 width="198" bgcolor="#000000"><font color="#FFFFFF"><img border="0" src="zwater.gif" tppabs="http://www.fireemblem.net/obs/pic/zwater.gif" width="16" height="16">水神</font></TH></TR>    
+  <TR>    
+    <TD width="68">…汝、我に何を祈る？</TD>    
+    <TD width="68">…汝、我に何を捧げる？</TD>    
+    <TD width="68">…汝、我に何を誓う？ </TD>    
+    <TD width="68">…汝、我に何を祈る？</TD>    
+    <TD width="68">…汝、我に何を捧げる？</TD>    
+    <TD width="68">…汝、我に何を誓う？ </TD>    
+    <TD width="68">…汝、我に何を祈る？</TD>    
+    <TD width="68">…汝、我に何を捧げる？</TD>    
+    <TD width="68">…汝、我に何を誓う？ </TD>    
+    <TD width="68">…汝、我に何を祈る？</TD>    
+    <TD width="68">…汝、我に何を捧げる？</TD>    
+    <TD width="62">…汝、我に何を誓う？ </TD></TR>    
+  <TR>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 0)" size=12     
+        name=D2> <OPTION value=0 selected>支配</OPTION> <OPTION     
+        value=1>平和</OPTION> <OPTION value=2>荣光</OPTION> <OPTION     
+        value=3>名誉</OPTION> <OPTION value=4>博爱</OPTION> <OPTION     
+        value=5>憎恶</OPTION> <OPTION value=6>胜利</OPTION> <OPTION     
+        value=7>牺牲</OPTION> <OPTION value=8>繁荣</OPTION> <OPTION     
+        value=9>理想</OPTION> <OPTION value=10>希望</OPTION> <OPTION     
+        value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 1)" size=12     
+        name=D1> <OPTION value=0>支配</OPTION> <OPTION value=1     
+        selected>平和</OPTION> <OPTION value=2>荣光</OPTION> <OPTION     
+        value=3>名誉</OPTION> <OPTION value=4>博爱</OPTION> <OPTION     
+        value=5>憎恶</OPTION> <OPTION value=6>胜利</OPTION> <OPTION     
+        value=7>牺牲</OPTION> <OPTION value=8>繁荣</OPTION> <OPTION     
+        value=9>理想</OPTION> <OPTION value=10>希望</OPTION> <OPTION     
+        value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 2)" size=12     
+        name=D3> <OPTION value=0>支配</OPTION> <OPTION value=1>平和</OPTION> <OPTION     
+        value=2 selected>荣光</OPTION> <OPTION value=3>名誉</OPTION> <OPTION     
+        value=4>博爱</OPTION> <OPTION value=5>憎恶</OPTION> <OPTION     
+        value=6>胜利</OPTION> <OPTION value=7>牺牲</OPTION> <OPTION     
+        value=8>繁荣</OPTION> <OPTION value=9>理想</OPTION> <OPTION     
+        value=10>希望</OPTION> <OPTION value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 3)" size=12     
+        name=D4> <OPTION value=0>支配</OPTION> <OPTION value=1>平和</OPTION> <OPTION     
+        value=2>荣光</OPTION> <OPTION value=3 selected>名誉</OPTION> <OPTION     
+        value=4>博爱</OPTION> <OPTION value=5>憎恶</OPTION> <OPTION     
+        value=6>胜利</OPTION> <OPTION value=7>牺牲</OPTION> <OPTION     
+        value=8>繁荣</OPTION> <OPTION value=9>理想</OPTION> <OPTION     
+        value=10>希望</OPTION> <OPTION value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 4)" size=12     
+        name=D5> <OPTION value=0>支配</OPTION> <OPTION value=1>平和</OPTION> <OPTION     
+        value=2>荣光</OPTION> <OPTION value=3>名誉</OPTION> <OPTION value=4     
+        selected>博爱</OPTION> <OPTION value=5>憎恶</OPTION> <OPTION     
+        value=6>胜利</OPTION> <OPTION value=7>牺牲</OPTION> <OPTION     
+        value=8>繁荣</OPTION> <OPTION value=9>理想</OPTION> <OPTION     
+        value=10>希望</OPTION> <OPTION value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 5)" size=12     
+        name=D6> <OPTION value=0>支配</OPTION> <OPTION value=1>平和</OPTION> <OPTION     
+        value=2>荣光</OPTION> <OPTION value=3>名誉</OPTION> <OPTION     
+        value=4>博爱</OPTION> <OPTION value=5 selected>憎恶</OPTION> <OPTION     
+        value=6>胜利</OPTION> <OPTION value=7>牺牲</OPTION> <OPTION     
+        value=8>繁荣</OPTION> <OPTION value=9>理想</OPTION> <OPTION     
+        value=10>希望</OPTION> <OPTION value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 6)" size=12     
+        name=D7> <OPTION value=0>支配</OPTION> <OPTION value=1>平和</OPTION> <OPTION     
+        value=2>荣光</OPTION> <OPTION value=3>名誉</OPTION> <OPTION     
+        value=4>博爱</OPTION> <OPTION value=5>憎恶</OPTION> <OPTION value=6     
+        selected>胜利</OPTION> <OPTION value=7>牺牲</OPTION> <OPTION     
+        value=8>繁荣</OPTION> <OPTION value=9>理想</OPTION> <OPTION     
+        value=10>希望</OPTION> <OPTION value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 7)" size=12     
+        name=D8> <OPTION value=0>支配</OPTION> <OPTION value=1>平和</OPTION> <OPTION     
+        value=2>荣光</OPTION> <OPTION value=3>名誉</OPTION> <OPTION     
+        value=4>博爱</OPTION> <OPTION value=5>憎恶</OPTION> <OPTION     
+        value=6>胜利</OPTION> <OPTION value=7 selected>牺牲</OPTION> <OPTION     
+        value=8>繁荣</OPTION> <OPTION value=9>理想</OPTION> <OPTION     
+        value=10>希望</OPTION> <OPTION value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 8)" size=12     
+        name=D9> <OPTION value=0>支配</OPTION> <OPTION value=1>平和</OPTION> <OPTION     
+        value=2>荣光</OPTION> <OPTION value=3>名誉</OPTION> <OPTION     
+        value=4>博爱</OPTION> <OPTION value=5>憎恶</OPTION> <OPTION     
+        value=6>胜利</OPTION> <OPTION value=7>牺牲</OPTION> <OPTION value=8     
+        selected>繁荣</OPTION> <OPTION value=9>理想</OPTION> <OPTION     
+        value=10>希望</OPTION> <OPTION value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 9)" size=12     
+      name=D10> <OPTION value=0>支配</OPTION> <OPTION value=1>平和</OPTION>     
+        <OPTION value=2>荣光</OPTION> <OPTION value=3>名誉</OPTION> <OPTION     
+        value=4>博爱</OPTION> <OPTION value=5>憎恶</OPTION> <OPTION     
+        value=6>胜利</OPTION> <OPTION value=7>牺牲</OPTION> <OPTION     
+        value=8>繁荣</OPTION> <OPTION value=9 selected>理想</OPTION> <OPTION     
+        value=10>希望</OPTION> <OPTION value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="68"><SELECT onchange="ChangeSelection(this.form, this, 10)" size=12     
+      name=D11> <OPTION value=0>支配</OPTION> <OPTION value=1>平和</OPTION>     
+        <OPTION value=2>荣光</OPTION> <OPTION value=3>名誉</OPTION> <OPTION     
+        value=4>博爱</OPTION> <OPTION value=5>憎恶</OPTION> <OPTION     
+        value=6>胜利</OPTION> <OPTION value=7>牺牲</OPTION> <OPTION     
+        value=8>繁荣</OPTION> <OPTION value=9>理想</OPTION> <OPTION value=10     
+        selected>希望</OPTION> <OPTION value=11>复仇</OPTION></SELECT></TD>    
+    <TD width="62"><SELECT onchange="ChangeSelection(this.form, this, 11)" size=12     
+        name=q> <OPTION value=0>支配</OPTION> <OPTION value=1>平和</OPTION> <OPTION     
+        value=2>荣光</OPTION> <OPTION value=3>名誉</OPTION> <OPTION     
+        value=4>博爱</OPTION> <OPTION value=5>憎恶</OPTION> <OPTION     
+        value=6>胜利</OPTION> <OPTION value=7>牺牲</OPTION> <OPTION     
+        value=8>繁荣</OPTION> <OPTION value=9>理想</OPTION> <OPTION     
+        value=10>希望</OPTION> <OPTION value=11     
+  selected>复仇</OPTION></SELECT></TD></TR></TBODY></TABLE></FORM>    
+<FORM name=text_slcstr>    
+<P><INPUT size=66></P></FORM>    
+<FORM name=text_stsstr>    
+<P><b><font color="#FF0000">最终能力值（ps版本，能力不足0按0计算）</font></b><BR>HP ┃MP ┃STR┃VIT┃INT┃MEN┃AGI┃DEX┃<BR><INPUT      
+size=38></P></FORM>     
+<table border="0" cellspacing="0" cellpadding="0">     
+  <tr>     
+    <td width="100%" align="center" colspan="7"><b><font color="#FF0000">人物属性</font></b></td>   
+  </tr>  
+  <tr>    
+    <td width="14%" align="center">カチュア<br> 
+      卡秋娅</td>   
+    <td width="14%" align="center">ヴァイス<br>
+      维斯</td>  
+    <td width="14%" align="center">ランスロット<br>
+      <font color="#008000"><b>圣骑士</b></font><br>
+      兰斯洛特</td>  
+    <td width="14%" align="center">ウォーレン<br>
+      <font color="#008000"><b>占星术士</b></font><br>
+      瓦伦</td>  
+    <td width="14%" align="center">カノープス<br>
+      <font color="#008000"><b>风使</b></font><br>
+      卡诺普斯</td>  
+    <td width="15%" align="center">ミルディン<br>
+      <font color="#008000"><b>白骑士</b></font><br>
+      米尔汀</td>  
+    <td width="15%" align="center">ギルダス<br>
+      <b><font color="#008000">白骑士</font></b><br>
+      基尔达斯</td>  
+  </tr>  
+</table>  
+<FORM name=text_elmstr>   
+<P>  
+<INPUT size=66></P></FORM></DIV>  
+  
+</BODY></HTML>  
+  

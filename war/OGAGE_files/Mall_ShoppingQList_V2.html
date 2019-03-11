@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0070)http://luxgirlstyle.appspot.com/queen_files/Mall_ShoppingQList_V2.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=x-windows-949">
+
+
+
+<title>
+
+</title><link rel="Stylesheet" type="text/css" href="./common(2).css"><link rel="Stylesheet" type="text/css" href="./2011_product(1).css"><link type="text/css" rel="stylesheet" href="./paging.css">
+    <script language="javascript">
+        //����ȭ�� ����
+        function showPostPopup() {
+            if ("" == "" && "" == "") {
+                alert("�α����� ���ּ���.");
+                return false;
+            }
+
+            if ("11802375" == "-10") {
+                alert("�������� �ʴ� ��ǰ�Դϴ�.");
+                return false;
+            }
+
+            if (document.getElementById("hidStyletLogin").value == "NO") {
+                document.getElementById("hidStyletLogin").value = "";
+                layerpopConfirm();
+                return;
+            }
+
+            window.open('Mall_popQuestionStep1.aspx?prdid=11802375&siteid=3', 'pop_ps', 'width=470px,height=610px');
+            return false;
+        }
+
+        //����Ʈ ������ ����
+        function showQDetail(inx, QuestionID) {
+            var sURL = "Mall_popShoppingView.aspx";
+            sURL += "?prdid=11802375";
+            sURL += "&siteid=3";
+            sURL += "&pageidx=" + inx;
+            sURL += "&qid=" + QuestionID;
+            sURL += "&catem=" + document.getElementById("ddlCateM").value;
+            sURL += "&answer=" + document.getElementById("ddlStatus").value;
+            sURL += "&title=" + document.getElementById("txtContext").value;
+
+
+            window.open(sURL, 'pop_ps_list', 'width=860px,height=320px');
+            return;
+        }
+        function showTitleBox(str) {
+            var obj = document.getElementById(str);
+            if (obj.style.display == "") {
+                obj.style.display = "none";
+            }
+            else {
+                obj.style.display = "";
+            }
+            return false;
+        }
+
+        function hideMe(obj) {
+            obj.style.display = "none"
+        }
+        function showMe(obj) {
+            obj.style.display = ""
+        }
+
+        //�о߼���
+        function funcSelectCate(str) {
+            var obj = document.getElementById("ddlCateM");
+            var objBtn = document.getElementById("btnSearch");
+
+            obj.options[str].selected = true;
+
+            objBtn.click();
+
+            return;
+        }
+
+        //�亯���� ����
+        function funcSelectAnswer(str) {
+            var obj = document.getElementById("ddlStatus");
+            var objBtn = document.getElementById("btnSearch");
+            obj[str].selected = true;
+            objBtn.click();
+
+            return;
+        }
+
+        function funcPageMove(str) {
+            if ("" != "") {
+                if (document.getElementById("hidStyletLogin").value == "NO") {
+                    document.getElementById("hidStyletLogin").value = "";
+                    layerpopConfirm();
+                    return;
+                }
+            }
+
+            window.open(str);
+        }
+
+        //����ȸ�� ���� ������ �̵�
+        layerpopConfirm = function () {
+            var param_userid = "";
+            alert('��Ÿ�Ϸ� ȸ���� �ƴմϴ�.\n����� �����ϸ� �ٷ� ��Ÿ�Ϸ� ȸ���� ���Ե˴ϴ�.');
+            window.open("/stylet/Membership/MemberTransfer.aspx?userid=" + escape(param_userid), "MemberReg", "scrollbars=yes");
+        }
+    </script>
+</head><body marginheight="0">
+    <form name="form1" method="post" action="http://luxgirlstyle.appspot.com/queen_files/Mall_ShoppingQList_V2.aspx?siteid=3&amp;PrstCd=1984766&amp;UserID=" id="form1">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__LASTFOCUS" id="__LASTFOCUS" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQ0NDE2MjgyNA8WAh4RX1N0eWxldF9Qcm9kdWN0SUQFCDExODAyMzc1FgICAw9kFgYCAQ8QDxYGHg1EYXRhVGV4dEZpZWxkBRBBbnN3ZXJTdGF0dXNOYW1lHg5EYXRhVmFsdWVGaWVsZAUOQW5zd2VyU3RhdHVzSUQeC18hRGF0YUJvdW5kZ2QQFQQG7KCE7LK0DOuLteuzgOuMgOq4sAzssYTtg53rjIDquLAM7ZW06rKw7JmE66OMFQQBMAExATIBMxQrAwRnZ2dnFgECA2QCAg8WAh4EVGV4dAUBMGQCBg8QDxYGHwEFBE5hbWUfAgULTUNBVEVHT1JZSUQfA2dkEBUJBuyghOyytAnsgqzsnbTspogM7L2U65SU7IOB7ZKIBuyGjOyerAnrlJTsnpDsnbgG7IOJ7IOBCeyerOyeheqzoAztjKjshZjsvZTrlJQG6riw7YOAFQkBMAExATIBMwE0ATUBNgE3AjI3FCsDCWdnZ2dnZ2dnZ2RkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBQlidG5TZWFyY2j0IzZxHnRD+Nn5OkYJHUFYlbuEAg==" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<!-- 
+CurrentUser.IsLogin : False
+CurrentUser.UserID : 
+CurrentUser.Name : 
+CurrentUser.IsEditor : False
+	IsGuestLogin : False
+	PrivateID : 
+	GuestTel : 
+	GuestEMail : 
+-->
+
+<!-- ��Ÿ�Ϸ� ����ӵ� üũ
+���� ticks : 634454620847812500
+���� ticks : 634454620847812500
+���� ticks : 0
+-->
+
+
+    <input name="hidStyletLogin" id="hidStyletLogin" value="NO" type="hidden">
+    <div class="efu_detailListTab contDiviTypeA">
+        <div id="efu_detailListTab03" class="efu_contTapCont">
+			<p class="efu_dotText">�����Ͻñ� ���� �ٸ� ȸ���Ե��� ������ ã�ƺ��ø� ��ٸ��� �����ŵ� �ñ����� �ٷ� �ذ��� �� �ֽ��ϴ�. ���������� ���� �߿��� ������ �ݵ�� �������͸� �̿����ּ���.
+			&nbsp;&nbsp;&nbsp;<a href="http://www.ogage.co.kr/customer/main.asp" target="_blank"><img src="./btn_customerGo.gif" alt="" class="vm"></a></p>
+			<div class="efu_detailListTabH clearfix">
+				<div class="fl">
+					<div class="fl">
+                        <select name="ddlStatus" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ddlStatus\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlStatus" style="width: 120px;">
+	<option value="0">��ü</option>
+	<option value="1">�亯���</option>
+	<option value="2">ä�ô��</option>
+	<option selected="selected" value="3">�ذ�Ϸ�</option>
+
+</select>
+					</div>
+					<p class="fl">����Q <strong>��0��</strong></p>
+				</div>
+				<div class="fr">
+					<a href="javascript:showPostPopup();void(0);"><img src="./btn_inquiry1.gif" alt="�����ϱ�"></a>
+					<a href="javascript:funcPageMove(&#39;/stylet/ShoppingQ/ShoppingQList.aspx?site=ogage&#39;);void(0);"><img src="./btn_shoppingQ.gif" alt="����Q ����"></a>
+				</div>
+			</div><!-- efu_detailListTabH -->
+			<table class="efu_listD efu_inquiryList" cellpadding="0">
+				<colgroup><col width="45"><col width="90"><col width="90"><col width=""><col width="110"><col width="110"></colgroup>
+				<thead>
+					<tr>
+						<th>��ȣ</th>
+						<th class="cp" onmouseover="showTitleBox(&#39;divMcate&#39;);" onmouseout="showTitleBox(&#39;divMcate&#39;);">�о�
+							<div id="divMcate" class="efu_inquiryListLayer efu_inquiryListLayer01" style="display: none;">
+								<strong>�о�</strong>
+								<ul>
+									<li><a href="javascript:funcSelectCate(0);">��ü</a></li>
+									<li><a href="javascript:funcSelectCate(1);">������</a></li>
+									<li><a href="javascript:funcSelectCate(2);">�ڵ��ǰ</a></li>
+									<li><a href="javascript:funcSelectCate(3);">����</a></li>
+									<li><a href="javascript:funcSelectCate(4);">������</a></li>
+									<li><a href="javascript:funcSelectCate(5);">����</a></li>
+									<li><a href="javascript:funcSelectCate(7);">ǰ��</a></li>
+									<li><a href="javascript:funcSelectCate(6);">�м��ڵ�</a></li>
+								</ul>
+							</div>
+						</th>
+						<th class="qTitleBox" onmouseover="showTitleBox(&#39;divAnswerGubun&#39;);" onmouseout="showTitleBox(&#39;divAnswerGubun&#39;);">�������
+							<div id="divAnswerGubun" class="efu_inquiryListLayer efu_inquiryListLayer02" style="display: none;">
+								<strong>�������</strong>
+								<ul>
+									<li><a href="javascript:funcSelectAnswer(0);">��ü</a></li>
+									<li><a href="javascript:funcSelectAnswer(1);">�亯���</a></li>
+									<li><a href="javascript:funcSelectAnswer(2);">ä�ô��</a></li>
+									<li><a href="javascript:funcSelectAnswer(3);">�ذ�Ϸ�</a></li>
+								</ul>
+							</div>
+						</th>
+						<th>����</th>
+						<th>�ۼ���</th>
+						<th>�ۼ���</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="trDataNot" class="efu_inquiryList_not">
+	<td colspan="6">
+							<img src="./inquiryList_not.gif" alt="����Q�� ���ؼ� �ñ����� �ذ��ϼ���.">
+						</td>
+</tr>
+
+
+                    
+				</tbody>
+			</table><!-- efu_proValuList -->
+ 
+			<table style="height: 40px;" width="100%">
+                <tbody><tr>
+                    <td align="center">
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+                        
+            </div>
+            <div class="efu_inquiryListSearch">
+				<div class="fl">
+                    <select name="ddlCateM" id="ddlCateM" style="width: 90px;">
+	<option selected="selected" value="0">��ü</option>
+	<option value="1">������</option>
+	<option value="2">�ڵ��ǰ</option>
+	<option value="3">����</option>
+	<option value="4">������</option>
+	<option value="5">����</option>
+	<option value="6">���԰�</option>
+	<option value="7">�м��ڵ�</option>
+	<option value="27">��Ÿ</option>
+
+</select>
+				</div>
+                <input name="txtContext" id="txtContext" class="txt fl" style="width: 160px;" type="text">
+                <input name="btnSearch" id="btnSearch" src="./btn_srch.gif" style="border-width: 0px;" type="image">
+
+			</div>
+
+		</div><!-- efu_detailListTab03 -->
+    </form>
+</body></html>

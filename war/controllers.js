@@ -45,7 +45,7 @@ phonecatApp.controller('PhoneListCtrl', ['$scope','$routeParams', '$route','$loc
 
             $scope.belles = arr;
             $scope.mainBelleUrl = arr[0].lsrc;
-     }
+     };
 
      if($scope.pageindex<1){
         $scope.pageindex=1;

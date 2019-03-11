@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
-  <application>silksatinstyle</application>
-  <version>1</version>
+  <application>tactics-ogre1995</application>
+  <version>2</version>
+  <runtime>java8</runtime>
 
   <!--
     Allows App Engine to send multiple requests to one instance in parallel:
@@ -15,6 +16,22 @@
   <property name="com.google.gdata.DisableCookieHandler" value="true"/>
 </system-properties>
 
+
+<static-files>
+  <include path="/**.ico" expiration="365d" />
+  <include path="/**.css" expiration="365d" />
+  <include path="/**.gif" expiration="365d" />
+  <include path="/**.png" expiration="365d" />
+  <include path="/**.jpg" expiration="365d" />
+  <include path="/**.js" expiration="30d" />
+  <include path="/**.html" expiration="30d" />
+  <include path="/**.htm" expiration="30d" />
+</static-files>
+
+<static-error-handlers>
+  <handler file="default_error.html" />
+  <handler file="over_quota.html" error-code="over_quota" />
+</static-error-handlers>
   <!--
     HTTP Sessions are disabled by default. To enable HTTP sessions specify:
 
