@@ -205,7 +205,9 @@
                 <a href="index.html">Beauty collection</a></h1> <a href="index.html">Random</a> 
                 &nbsp;&nbsp;<a href="latest.html">Latest</a> 
                 &nbsp;&nbsp;<a href="all.html">All</a> 
-                &nbsp;&nbsp;<a href="k.html">Korea</a> &nbsp;&nbsp;<a target="_blank" href="http://youtu.be/6tfvSg1GbYQ"><img src="https://secure.easy-forex.com/img/icon_youtube_36x14.gif"></a> &nbsp;&nbsp; <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=lich0079@gmail.com&currency_code=USD&amount=0.99&return=http://silksatinstyle.appspot.com/&item_name=donate&undefined_quantity=1&no_note=0"><img src="img/donate.png" style="width:70px;"/></a> &nbsp;&nbsp; <span id="total"> </span> pictures
+				&nbsp;&nbsp;<a href="k.html">Korea</a> 
+				&nbsp;&nbsp; <a target="_blank" href="https://www.youtube.com/channel/UC2bqZSucjKQWS7cW57gXTsA?sub_confirmation=1">Youtube Video</a> 
+				&nbsp;&nbsp; <span id="total"> </span> pictures
             <p class="lead"></p>
             <div id="global-nav" class="" data-rapid_m="global-nav" style="float:left;text-align:center;height:90px;background:rgba(245, 240, 240, 0.8);">
 		</div>
@@ -312,7 +314,12 @@
                 for(i in imgs){
                     var img = imgs[i];
                     var clone = $('.tobeClone').clone().removeClass('tobeClone').addClass("thumbnail");
-                    clone.find('.aimg').attr('href',img.lsrc).attr('data-lightbox',"lightbox_");
+					var r = parseInt(Math.random()*10,10)+1;
+						if (r < 4) {
+							clone.find('.aimg').attr('href','https://www.youtube.com/channel/UC2bqZSucjKQWS7cW57gXTsA?sub_confirmation=1').attr('target',"_black");
+						} else {
+							clone.find('.aimg').attr('href',img.lsrc).attr('data-lightbox',"lightbox_");
+						}
                     clone.find('.img').attr('src',img.lsrc);
                     newItemContainer.append(clone);
                     
@@ -342,7 +349,12 @@
 			    	for(i in imgs){
 	                    var img = imgs[i];
 	                    var clone = $('.tobeClone').clone().removeClass('tobeClone').addClass("thumbnail");
-	                    clone.find('.aimg').attr('href',img.lsrc).attr('data-lightbox',"lightbox_");
+						var r = parseInt(Math.random()*10,10)+1;
+						if (r < 4) {
+							clone.find('.aimg').attr('href','https://www.youtube.com/channel/UC2bqZSucjKQWS7cW57gXTsA?sub_confirmation=1').attr('target',"_black");
+						} else {
+							clone.find('.aimg').attr('href',img.lsrc).attr('data-lightbox',"lightbox_");
+						}
 	                    clone.find('.img').attr('src',img.lsrc);
 	                    newItemContainer.append(clone);
 	                    
@@ -373,33 +385,55 @@
 		});
 	</script>
 
+<script type="text/javascript">
+var   ad_idzone = "3430837",
+      ad_frequency_period = 60,
+      ad_frequency_count = 1,
+      ad_trigger_method = 3,
+      ad_trigger_class = "",
+      ad_trigger_type = 2,
+      interstitial_type = 1;
+</script>
+<script type="text/javascript" src="https://a.exosrv.com/desktop-interstitial.js"></script>
 
-<div style="position:fixed;left:20px;bottom:20px;">
-	<iframe src="//player.bilibili.com/player.html?aid=46124676&cid=80813423&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-	<!--
-	<a target="_blank"  href="https://www.amazon.com/dp/B007D44RS2/ref=sspa_dk_detail_9?psc=1&pd_rd_i=B007D44RS2&pd_rd_w=WOvk7&pf_rd_p=f0dedbe2-13c8-4136-a746-4398ed93cf0f&pd_rd_wg=1bGGW&pf_rd_r=5FM9B9C2SNMZTBJDWFA6&pd_rd_r=93ddbe79-2621-11e9-b0de-212d94c64fa6&_encoding=UTF8&tag=tacticsogre19-20&linkCode=ur2&linkId=69480298eabdc20e18ef9d62ecd0ffae&camp=1789&creative=9325" ><img src="https://m.media-amazon.com/images/S/aplus-seller-content-images-us-east-1/ATVPDKIKX0DER/A3DBWTK1F3SSNP/f1eeb41e-2c3f-4fc6-a633-4df917a7d047._CR0,25,507,507_PT0_SX300__.png" style="border:none !important; margin:0px !important;" /></a>
-	-->
+<script type="text/javascript">
+var ad_idzone = "3430835",
+    ad_width = "160",
+    ad_height = "600",
+    v_pos = "top",
+    h_pos = "right";
+</script>
+<script type="text/javascript" src="https://a.exosrv.com/js.php?t=17&idzone=3430835"></script>
+
+<script type="text/javascript">
+var ad_idzone = "3430839",
+    ad_width = "468",
+    ad_height = "60",
+    v_pos = "bottom",
+    h_pos = "center";
+</script>
+<script type="text/javascript" src="https://a.exosrv.com/js.php?t=17&idzone=3430839"></script>
+
+<div  style="position: fixed; height: 600px; width: 120px; left: 0px; margin-left: 50px; top: 50%; margin-top: -300px; z-index: 999999;">
+
+<div style="margin: 50px 0;">
+	<a href="index.html">Random</a>
+</div>
+<div style="margin: 50px 0;">
+	<a href="latest.html">Latest</a> 
+</div>
+<div style="margin: 50px 0;">
+	<a href="all.html">All</a> 
+</div>
+<div style="margin: 50px 0;">
+	<a href="k.html">Korea</a> 
+</div>
+<div>
+
+</div>
 </div>
 
-<div style="position:fixed;left:20px;bottom:25%;">
-	<iframe src="//player.bilibili.com/player.html?aid=46017911&cid=80627030&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
 
-
-<div style="position:fixed;right:20px;bottom:25%;">
-	<iframe src="//player.bilibili.com/player.html?aid=46036889&cid=80657715&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
-
-
-<div style="position:fixed;right:20px;bottom:20px">
-	<!--
-	<a target="_blank"  href="https://www.amazon.com/ANGVNS-Women-Sleeveless-Evening-Apricot/dp/B01FJOIREW/ref=sr_1_19?s=apparel&ie=UTF8&qid=1549026652&sr=1-19&nodeID=7147440011&psd=1&keywords=silk+dress&_encoding=UTF8&tag=tacticsogre19-20&linkCode=ur2&linkId=fe92a86e123d61af62920cb620512999&camp=1789&creative=9325" >
-		<img src="https://images-na.ssl-images-amazon.com/images/I/711FF7V6JWL._UL1500_.jpg"  width="150" style="border:none !important; margin:0px !important;" />
-	</a>
-	<ins class="epn-placement" data-config-id="5c54570f891ea32a8fb97b21"></ins>
--->
-	<iframe src="//player.bilibili.com/player.html?aid=46024507&cid=80638114&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
 
 <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"
     data-pin-hover="true"
